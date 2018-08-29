@@ -24,11 +24,11 @@
 
 From anywhere call `npm install -g gutendocs`.  This will give you access to the gutendocs shell command.
 
-### Initializing Gutendocs
+### Initializing gutendocs
 
-Now from any location, preferably the root of a repo you can call `gutendocs init [foldername]` which will initialize a API folder directly in the directory you are currently working in.  It will also create a settings file called `.gutenrc.sjon` and a `.gutenignore` that will allow you to customize your usage of gutendocs.  your gutenignore works just like a `.gitignore` file and will ignore folders and files you specify and allow for the use of * as a wild card.  `.gutenrc.json` is a file that contains all the settings you can customize for for your API.
+Now from any location, preferably the root of a repo, you can call `gutendocs init [foldername]` which will initialize a API folder directly in the directory you are currently working in.  It will also create a settings file called `.gutenrc.sjon` and a `.gutenignore` that will allow you to customize your usage of gutendocs.  your gutenignore works just like a `.gitignore` file and will ignore folders and files you specify and allow for the use of * as a wild card.  `.gutenrc.json` is a file that contains all the settings you can customize for for your API.
 
-#### .gutenrc explanation
+#### .gutenrc Explanation
 ```javascript
 "apiDir": // this is the folder that your API has been created in. [default = GutenAPI]
 "skeleton": { // this outlines the structure of how your API will be organize
