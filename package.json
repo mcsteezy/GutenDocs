@@ -1,12 +1,25 @@
 {
   "name": "gutendocs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "API Generator Using JSDoc Parser",
   "main": "index.js",
+  "bin": {
+    "gutendocs": "./bin/cli.js",
+    "gutenDocs": "./bin/cli.js"
+  },
+  "keywords": [
+    "api",
+    "jsdocs",
+    "documentaion",
+    "generator"
+  ],
   "scripts": {
-    "lint": "eslint \"./**/*.js\"",
-    "pretest": "npm run lint",
-    "test": "echo \"No tests\""
+    "lint": "eslint --ext .jsx --ext .js .",
+    "watchTest": "jest --watch",
+    "test": "jest --maxWorkers=4 --detectOpenHandles",
+    "build-dev": "webpack --mode development && gutendocs reset",
+    "build-all": "webpack --mode development && gutendocs reset && gutendocs --all",
+    "react-dev": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -18,12 +31,74 @@
     "url": "https://github.com/GutenTech/GutenDocs/issues"
   },
   "homepage": "https://github.com/GutenTech/GutenDocs#readme",
-  "dependencies": {},
+  "dependencies": {
+    "acorn": "^5.7.1",
+    "acorn-jsx": "^4.1.1",
+    "acorn-object-rest-spread": "^1.1.0",
+    "doctrine": "^2.1.0",
+    "ignore-walk": "^3.0.1",
+    "inject-js": "^0.5.6",
+    "inquirer": "^6.1.0",
+    "jquery": "^3.3.1",
+    "klaw": "^3.0.0",
+    "ramda": "^0.25.0",
+    "user": "0.0.0",
+    "yargs": "^12.0.1"
+  },
   "devDependencies": {
-    "eslint": "4.19.1",
-    "eslint-config-airbnb": "17.0.0",
-    "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.10.0"
+    "autoprefixer": "^9.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.3",
+    "copy-webpack-plugin": "^4.5.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "extensions": "^4.1.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "fontawesome": "^4.7.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "23.2.0",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.9.3",
+    "popper.js": "^1.14.4",
+    "postcss-loader": "^3.0.0",
+    "precss": "^3.1.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-dom": "^16.4.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-hash-link": "^1.2.0",
+    "react-scrollbar": "^0.5.4",
+    "react-sidebar": "^3.0.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.1.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test_setup.js",
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "syntax-dynamic-import"
+    ]
   }
 }

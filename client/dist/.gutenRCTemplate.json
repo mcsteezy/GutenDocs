@@ -1,0 +1,31 @@
+{
+  "apiDir": "GutenApi/",
+  "skeleton": {
+    "sortByOrder": [
+      "sortByFileName",
+      "catchAll"
+    ],
+    "sortBySection": {
+      "section": "@section"
+    },
+    "sortByFileName": {
+      "includeExtension": false
+    },
+    "sortByParentDirectoryName": {
+      "targetDepth": 1
+    },
+    "catchAll": {
+      "section": "Miscellaneous"
+    }
+  },
+  "acornSettings": {
+    "allowImportExportEverywhere": true,
+    "allowHashBang": true
+  },
+  "doctrineSettings": {
+    "unwrap": true,
+    "recoverable": true,
+    "sloppy": true
+  },
+  "verbosity": 1
+}

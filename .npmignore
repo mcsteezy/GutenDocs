@@ -1,0 +1,24 @@
+#folders
+node_modules
+GutenApi
+mockData
+client/src/
+
+#config settings
+package-lock.json
+.vscode
+.eslintignore
+.eslintrc.js
+.travis.yml
+webpack.config.js
+.gutenrc.json
+.gitignore
+
+#filetypes
+.DS_Store
+
+#testing files
+test_setup.js
+__tests__
+__mocks__
+
